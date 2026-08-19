@@ -109,6 +109,9 @@ Beispiel:
 Die Prüfsumme der wiederhergestellten Datei entspricht der Prüfsumme
 der ursprünglichen Datei.
 
+<img width="2016" height="495" alt="Unbenannt (2)" src="https://github.com/user-attachments/assets/c1ba83f9-6d95-4b71-94d2-21a5ea476c05" />
+
+
 ---
 
 ## Test 7 – Neuer Client
