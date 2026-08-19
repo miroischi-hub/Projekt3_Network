@@ -10,49 +10,7 @@ Für das Projekt sind folgende Debian-VMs vorgesehen:
 
 ## Aufbau
 
-                       +---------------------+
-                       | Ansible Control Node|
-                       | Playbooks/Inventory |
-                       +----------+----------+
-                                  |
-                              Ansible/SSH
-                                  |
-                +-----------------+-----------------+
-                |                 |                 |
-                v                 v                 v
-          +-----------+     +-----------+     +-----------+
-          | Client 01 |     | Client 02 |     | Client 03 |
-          |  Debian   |     |  Debian   |     |  Debian   |
-          +-----+-----+     +-----+-----+     +-----+-----+
-                |                 |                 |
-                +-----------------+-----------------+
-                                  |
-                              Borg/SSH
-                                  |
-                                  v
-                         +---------------+
-                         | Backup Server |
-                         |    Debian     |
-                         | Borg Repos    |
-                         +---------------+
-
-flowchart TB
-    A["Ansible Control Node<br/>Debian<br/>Ansible"]
-
-    C1["Backup Client 01<br/>Debian<br/>BorgBackup"]
-    C2["Backup Client 02<br/>Debian<br/>BorgBackup"]
-    C3["Backup Client 03<br/>Debian<br/>BorgBackup"]
-
-    B["Backup Server<br/>Debian<br/>Borg Repositories"]
-
-    A -->|"Ansible über SSH<br/>TCP 22"| C1
-    A -->|"Ansible über SSH<br/>TCP 22"| C2
-    A -->|"Ansible über SSH<br/>TCP 22"| C3
-    A -->|"Ansible über SSH<br/>TCP 22"| B
-
-    C1 -->|"Borg über SSH<br/>TCP 22"| B
-    C2 -->|"Borg über SSH<br/>TCP 22"| B
-    C3 -->|"Borg über SSH<br/>TCP 22"| B
+<img width="1527" height="654" alt="Unbenannt" src="https://github.com/user-attachments/assets/24a52198-dee0-47f2-be78-ffb4a4567693" />
 
 ## Ansible Control Node
 
