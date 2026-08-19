@@ -38,3 +38,5 @@ erfüllen:
 - verschlüsselte Borg-Repositories
 - Zugriff nur für vorgesehene Benutzer
 - keine unverschlüsselte Speicherung der Backup-Daten
+
+## Ablauf
