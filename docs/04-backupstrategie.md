@@ -40,3 +40,5 @@ erfüllen:
 - keine unverschlüsselte Speicherung der Backup-Daten
 
 ## Ablauf
+
+<img width="1410" height="709" alt="Unbenannt (1)" src="https://github.com/user-attachments/assets/d1417fc1-345e-477b-9a8d-cd894b4799b0" />
