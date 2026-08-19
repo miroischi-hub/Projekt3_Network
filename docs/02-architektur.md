@@ -36,6 +36,24 @@ Für das Projekt sind folgende Debian-VMs vorgesehen:
                          | Borg Repos    |
                          +---------------+
 
+flowchart TB
+    A["Ansible Control Node<br/>Debian<br/>Ansible"]
+
+    C1["Backup Client 01<br/>Debian<br/>BorgBackup"]
+    C2["Backup Client 02<br/>Debian<br/>BorgBackup"]
+    C3["Backup Client 03<br/>Debian<br/>BorgBackup"]
+
+    B["Backup Server<br/>Debian<br/>Borg Repositories"]
+
+    A -->|"Ansible über SSH<br/>TCP 22"| C1
+    A -->|"Ansible über SSH<br/>TCP 22"| C2
+    A -->|"Ansible über SSH<br/>TCP 22"| C3
+    A -->|"Ansible über SSH<br/>TCP 22"| B
+
+    C1 -->|"Borg über SSH<br/>TCP 22"| B
+    C2 -->|"Borg über SSH<br/>TCP 22"| B
+    C3 -->|"Borg über SSH<br/>TCP 22"| B
+
 ## Ansible Control Node
 
 Der Ansible Control Node übernimmt die zentrale Konfiguration der
